@@ -347,12 +347,14 @@ view: opportunity {
   measure: amount {
     type: sum
     value_format: "#,##0"
+    drill_fields: [detail*]
 
   }
 
   measure: acv_forecast_c {
     type: sum
     value_format: "#,##0"
+    drill_fields: [detail*]
     sql: ${TABLE}.acv_forecast_c ;;
   }
 
