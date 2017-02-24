@@ -2152,11 +2152,13 @@ view: opportunity {
 
   measure: amount {
     type: sum
+    value_format: "#,##0"
 
   }
 
   measure: acv_forecast_c {
     type: sum
+    value_format: "#,##0"
     sql: ${TABLE}.acv_forecast_c ;;
   }
 
