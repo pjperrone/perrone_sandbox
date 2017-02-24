@@ -17,13 +17,21 @@ include: "*.dashboard.lookml"  # include all dashboards in this project
 # }
 
 explore: opportunity {
-  label: "SFDC Opportunities"
-  view_label: "SFDC Opportunities"
+  label: "Sandbox"
+  view_label: "Opportunity"
 
   join: account {
-    view_label: "Product Events"
-    relationship:one_to_one
+    view_label: "Account"
+    relationship:many_to_one
     type: left_outer
     sql_on: ${opportunity.account_id} = ${account.id} ;;
   }
+
+  join: user {
+    view_label: "Users"
+    relationship:many_to_one
+    type: left_outer
+    sql_on: ${opportunity.owner_id} = ${user.id} ;;
   }
+
+ }
