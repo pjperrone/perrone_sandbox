@@ -52,10 +52,10 @@ view: opportunity {
     sql: ${TABLE}.active_negotiation_c ;;
   }
 
-  dimension: acv_forecast_c {
-    type: number
-    sql: ${TABLE}.acv_forecast_c ;;
-  }
+#  dimension: acv_forecast_c {
+#    type: number
+#    sql: ${TABLE}.acv_forecast_c ;;
+#  }
 
   dimension_group: ae_meeting_set_for_c {
     type: time
@@ -76,10 +76,10 @@ view: opportunity {
     sql: ${TABLE}.alliances_sponsor_c ;;
   }
 
-  dimension: amount {
-    type: number
-    sql: ${TABLE}.amount ;;
-  }
+#  dimension: amount {
+#   type: number
+#    sql: ${TABLE}.amount ;;
+#  }
 
   dimension: approval_status_c {
     type: string
@@ -2148,6 +2148,16 @@ view: opportunity {
   measure: count {
     type: count
     drill_fields: [detail*]
+  }
+
+  measure: amount {
+    type: sum
+
+  }
+
+  measure: acv_forecast_c {
+    type: number
+    sql: ${TABLE}.acv_forecast_c ;;
   }
 
   # ----- Sets of fields for drilling ------
