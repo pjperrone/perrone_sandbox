@@ -2156,7 +2156,7 @@ view: opportunity {
   }
 
   measure: acv_forecast_c {
-    type: number
+    type: sum
     sql: ${TABLE}.acv_forecast_c ;;
   }
 
