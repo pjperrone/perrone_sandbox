@@ -50,11 +50,13 @@ view: saasoptics_customers_20170225_1028 {
 
   dimension: code {
     type: number
+    label: "Customer Tier"
     sql: ${TABLE}.code ;;
   }
 
   dimension: company_name {
     type: string
+    hidden: yes
     sql: ${TABLE}.company_name ;;
   }
 
@@ -83,6 +85,7 @@ view: saasoptics_customers_20170225_1028 {
 
   dimension: custom_field_1_text_ {
     type: string
+    label: "Account Owner"
     sql: ${TABLE}.custom_field_1_text_ ;;
   }
 
@@ -159,7 +162,7 @@ view: saasoptics_customers_20170225_1028 {
 
   dimension: name {
     type: string
-    hidden: yes
+    hidden: no
     sql: ${TABLE}.name ;;
   }
 
@@ -271,6 +274,7 @@ view: saasoptics_customers_20170225_1028 {
 
   dimension: segment {
     type: number
+    label: "Employee Count"
     sql: ${TABLE}.segment ;;
   }
 
@@ -286,6 +290,7 @@ view: saasoptics_customers_20170225_1028 {
 
   dimension: subsegment {
     type: string
+    label: "Sales Team"
     sql: ${TABLE}.subsegment ;;
   }
 
@@ -302,7 +307,7 @@ view: saasoptics_customers_20170225_1028 {
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-      company_name,
+      name,
       number,
       sales_force_id,
       subsegment,
