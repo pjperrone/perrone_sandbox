@@ -168,18 +168,19 @@ view: transactions_20170225_1029 {
 
   dimension: transaction_auto_renew {
     group_label: "Billing Metadata"
+    hidden: yes
     type: string
     sql: ${TABLE}.transaction_auto_renew ;;
   }
 
   dimension: transaction_billing_method {
-    group_label: "Billing Metadata"
+    label: "Billing Method"
     type: string
     sql: ${TABLE}.transaction_billing_method ;;
   }
 
   dimension: transaction_canceled {
-    group_label: "Billing Metadata"
+    label: "Transaction Canceled"
     type: yesno
     sql: ${TABLE}.transaction_canceled ;;
   }
@@ -259,12 +260,14 @@ view: transactions_20170225_1029 {
   dimension: transaction_mrr_rate {
     type: number
     group_label: "Line Item"
+    hidden: yes
     sql: ${TABLE}.transaction_mrr_rate ;;
   }
 
   dimension: transaction_notes {
     type: string
     group_label: "Line Item"
+    hidden: yes
     sql: ${TABLE}.transaction_notes ;;
   }
 
@@ -272,18 +275,21 @@ view: transactions_20170225_1029 {
     type: string
     group_label: "Line Item"
     label: "Transaction Number"
+    label: "Billing Metadata"
     sql: ${TABLE}.transaction_number ;;
   }
 
   dimension: transaction_number_field_1 {
     type: number
     group_label: "Line Item"
+    hidden: yes
     sql: ${TABLE}.transaction_number_field_1 ;;
   }
 
   dimension: transaction_number_field_2 {
     type: string
     group_label: "Line Item"
+    hidden: yes
     sql: ${TABLE}.transaction_number_field_2 ;;
   }
 
@@ -312,12 +318,14 @@ view: transactions_20170225_1029 {
   dimension: transaction_permit_different_invoice_item {
     type: yesno
     hidden: yes
+    group_label: "Billing Metadata"
     sql: ${TABLE}.transaction_permit_different_invoice_item ;;
   }
 
   dimension: transaction_permit_imbalance {
     type: yesno
     hidden: yes
+    group_label: "Billing Metadata"
     sql: ${TABLE}.transaction_permit_imbalance ;;
   }
 
@@ -330,7 +338,8 @@ view: transactions_20170225_1029 {
 
   dimension: transaction_rate {
     type: number
-    hidden: yes
+     group_label: "Line Item"
+    label: "Unit Price"
     sql: ${TABLE}.transaction_rate ;;
   }
 
@@ -384,13 +393,13 @@ view: transactions_20170225_1029 {
 
   dimension: transaction_renewed_by {
     type: string
-    group_label: "Renewal Related"
+    hidden: yes
     sql: ${TABLE}.transaction_renewed_by ;;
   }
 
   dimension: transaction_renews {
     type: string
-    group_label: "Renewal Related"
+    hidden: yes
     sql: ${TABLE}.transaction_renews ;;
   }
 
@@ -410,6 +419,7 @@ view: transactions_20170225_1029 {
     type: string
     label: "SFDC Opportunity ID"
     hidden: yes
+    group_label: "Billing Metadata"
     group_label: "Sales Related"
     sql: ${TABLE}.transaction_sales_force_opportunity_id ;;
   }
