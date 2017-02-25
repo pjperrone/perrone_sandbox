@@ -1,8 +1,10 @@
 view: saasoptics_customers_20170225_1028 {
+  view_label: "SaasOptics Customers"
   sql_table_name: saasoptics.customers_20170225_1028 ;;
 
   dimension: account_number {
     type: string
+    hidden: yes
     sql: ${TABLE}.account_number ;;
   }
 
@@ -13,26 +15,31 @@ view: saasoptics_customers_20170225_1028 {
 
   dimension: address_1 {
     type: string
+    hidden: yes
     sql: ${TABLE}.address_1 ;;
   }
 
   dimension: address_2 {
     type: string
+    hidden: yes
     sql: ${TABLE}.address_2 ;;
   }
 
   dimension: address_3 {
     type: string
+    hidden: yes
     sql: ${TABLE}.address_3 ;;
   }
 
   dimension: alt_contact {
     type: string
+    hidden: yes
     sql: ${TABLE}.alt_contact ;;
   }
 
   dimension: alt_phone {
     type: string
+    hidden: yes
     sql: ${TABLE}.alt_phone ;;
   }
 
@@ -53,6 +60,7 @@ view: saasoptics_customers_20170225_1028 {
 
   dimension: contact {
     type: string
+    hidden: yes
     sql: ${TABLE}.contact ;;
   }
 
@@ -63,11 +71,13 @@ view: saasoptics_customers_20170225_1028 {
 
   dimension: country_code {
     type: string
+    hidden: yes
     sql: ${TABLE}.country_code ;;
   }
 
   dimension: currency {
     type: string
+    hidden: yes
     sql: ${TABLE}.currency ;;
   }
 
@@ -103,11 +113,13 @@ view: saasoptics_customers_20170225_1028 {
 
   dimension: fax {
     type: string
+    hidden: yes
     sql: ${TABLE}.fax ;;
   }
 
   dimension: first_name {
     type: string
+    hidden: yes
     sql: ${TABLE}.first_name ;;
   }
 
@@ -118,21 +130,25 @@ view: saasoptics_customers_20170225_1028 {
 
   dimension: invoice_email_preference {
     type: yesno
+    hidden: yes
     sql: ${TABLE}.invoice_email_preference ;;
   }
 
   dimension: invoice_print_preference {
     type: yesno
+    hidden: yes
     sql: ${TABLE}.invoice_print_preference ;;
   }
 
   dimension: item_sales_tax {
     type: string
+    hidden: yes
     sql: ${TABLE}.item_sales_tax ;;
   }
 
   dimension: last_name {
     type: string
+    hidden: yes
     sql: ${TABLE}.last_name ;;
   }
 
@@ -143,11 +159,13 @@ view: saasoptics_customers_20170225_1028 {
 
   dimension: name {
     type: string
+    hidden: yes
     sql: ${TABLE}.name ;;
   }
 
   dimension: notes {
     type: string
+    hidden: yes
     sql: ${TABLE}.notes ;;
   }
 
@@ -178,46 +196,55 @@ view: saasoptics_customers_20170225_1028 {
 
   dimension: phone {
     type: string
+    hidden: yes
     sql: ${TABLE}.phone ;;
   }
 
   dimension: qb_city {
     type: string
+    group_label:"Quickbooks"
     sql: ${TABLE}.qb_city ;;
   }
 
   dimension: qb_id {
     type: number
+    group_label:"Quickbooks"
     sql: ${TABLE}.qb_id ;;
   }
 
   dimension: qb_sales_rep {
     type: string
+    group_label:"Quickbooks"
     sql: ${TABLE}.qb_sales_rep ;;
   }
 
   dimension: quick_books_active {
     type: yesno
+    group_label:"Quickbooks"
     sql: ${TABLE}.quick_books_active ;;
   }
 
   dimension: quick_books_email {
     type: string
+    group_label:"Quickbooks"
     sql: ${TABLE}.quick_books_email ;;
   }
 
   dimension: quick_books_full_name {
     type: string
+    group_label:"Quickbooks"
     sql: ${TABLE}.quick_books_full_name ;;
   }
 
   dimension: quick_books_name {
     type: string
+    group_label:"Quickbooks"
     sql: ${TABLE}.quick_books_name ;;
   }
 
   dimension: resale_number {
     type: string
+    hidden:yes
     sql: ${TABLE}.resale_number ;;
   }
 
@@ -238,6 +265,7 @@ view: saasoptics_customers_20170225_1028 {
 
   dimension: salutation {
     type: string
+    hidden: yes
     sql: ${TABLE}.salutation ;;
   }
 
