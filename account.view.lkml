@@ -375,10 +375,6 @@ view: account {
     sql: ${TABLE}.renewal_team_c ;;
   }
 
-  dimension: saa_soptics_arr_c {
-    type: number
-    sql: ${TABLE}.saa_soptics_arr_c ;;
-  }
 
   dimension: sales_territory_c {
     type: string
@@ -421,4 +417,10 @@ view: account {
     type: count
     drill_fields: [id, name, opportunity.count]
   }
+
+  measure: saa_soptics_arr_c {
+    type: sum
+    sql: ${TABLE}.saa_soptics_arr_c ;;
+  }
+
 }
