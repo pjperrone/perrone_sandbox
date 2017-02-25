@@ -35,3 +35,23 @@ explore: opportunity {
   }
 
  }
+
+explore: account {
+  label: "Sandbox"
+  view_label: "Accounts"
+
+  join: opportunity {
+    view_label: "Account"
+    relationship:one_to_many
+    type: left_outer
+    sql_on: ${account.id} = ${opportunity.account_id} ;;
+  }
+
+  join: user {
+    view_label: "Users"
+    relationship:one_to_one
+    type: left_outer
+    sql_on: ${account.id} = ${user.id} ;;
+  }
+
+}
