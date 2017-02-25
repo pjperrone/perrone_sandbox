@@ -40,6 +40,12 @@ explore: saasoptics_customers_20170225_1028 {
   label: "SaasOptics Customers"
 
 }
+
+explore: transactions_20170225_1029 {
+  label: "SaasOptics Customers"
+
+}
+
 explore: account {
   label: "SFDC Accounts"
   view_label: "Accounts"
