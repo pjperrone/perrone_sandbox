@@ -24,79 +24,79 @@ view: transactions_20170225_1029 {
 
   dimension: contract_lead_date {
     type: string
-    group_label: "Contract Dimensions"
+    group_label: "Contract"
     sql: ${TABLE}.contract_lead_date ;;
   }
 
   dimension: contract_lead_source {
     type: string
-    group_label: "Contract Dimensions"
+    group_label: "Contract"
     sql: ${TABLE}.contract_lead_source ;;
   }
 
   dimension: contract_number {
     type: string
-    group_label: "Contract Dimensions"
+    group_label: "Contract"
     sql: ${TABLE}.contract_number ;;
   }
 
   dimension: contract_number_field_1 {
     type: string
-    group_label: "Contract Dimensions"
+    group_label: "Contract"
     sql: ${TABLE}.contract_number_field_1 ;;
   }
 
   dimension: contract_number_field_2 {
     type: string
-    group_label: "Contract Dimensions"
+    group_label: "Contract"
     sql: ${TABLE}.contract_number_field_2 ;;
   }
 
   dimension: contract_text_field_1 {
     type: string
-    group_label: "Contract Dimensions"
+    group_label: "Contract"
     sql: ${TABLE}.contract_text_field_1 ;;
   }
 
   dimension: contract_text_field_2 {
     type: string
-    group_label: "Contract Dimensions"
+    group_label: "Contract"
     sql: ${TABLE}.contract_text_field_2 ;;
   }
 
   dimension: customer_city {
     type: string
-    hidden: yes
+    group_label: "Customer"
     sql: ${TABLE}.customer_city ;;
   }
 
   dimension: customer_country {
     type: string
-    hidden: yes
+    group_label: "Customer"
     sql: ${TABLE}.customer_country ;;
   }
 
   dimension: customer_industry {
     type: string
-    hidden: yes
+    group_label: "Customer"
     sql: ${TABLE}.customer_industry ;;
   }
 
   dimension: customer_market {
     type: string
-    hidden: yes
+    group_label: "Customer"
     sql: ${TABLE}.customer_market ;;
   }
 
   dimension: customer_name {
     type: string
-    hidden: yes
+    group_label: "Customer"
     sql: ${TABLE}.customer_name ;;
   }
 
   dimension: customer_number {
     type: string
-    hidden: yes
+    group_label: "Customer"
     sql: ${TABLE}.customer_number ;;
   }
 
@@ -114,13 +114,13 @@ view: transactions_20170225_1029 {
 
   dimension: customer_sales_force_id {
     type: string
-    hidden: yes
+    group_label: "Customer"
     sql: ${TABLE}.customer_sales_force_id ;;
   }
 
   dimension: customer_segment {
     type: number
-    hidden: yes
+    group_label: "Customer"
     sql: ${TABLE}.customer_segment ;;
   }
 
@@ -132,7 +132,7 @@ view: transactions_20170225_1029 {
 
   dimension: customer_subsegment {
     type: string
-    hidden: yes
+    group_label: "Customer"
     sql: ${TABLE}.customer_subsegment ;;
   }
 
@@ -155,21 +155,25 @@ view: transactions_20170225_1029 {
   }
 
   dimension: transaction_auto_renew {
+    group_label: "Billing Metadata"
     type: string
     sql: ${TABLE}.transaction_auto_renew ;;
   }
 
   dimension: transaction_billing_method {
+    group_label: "Billing Metadata"
     type: string
     sql: ${TABLE}.transaction_billing_method ;;
   }
 
   dimension: transaction_canceled {
+    group_label: "Billing Metadata"
     type: yesno
     sql: ${TABLE}.transaction_canceled ;;
   }
 
   dimension: transaction_class {
+    group_label: "Billing Metadata"
     type: string
     sql: ${TABLE}.transaction_class ;;
   }
@@ -177,21 +181,25 @@ view: transactions_20170225_1029 {
   dimension: transaction_conversion {
     type: string
     label: "Lead Source"
+    group_label: "Sales Related"
     sql: ${TABLE}.transaction_conversion ;;
   }
 
   dimension: transaction_created {
+    group_label: "Billing Metadata"
     type: date
     sql: ${TABLE}.transaction_created ;;
   }
 
   dimension: transaction_created_by {
+    group_label: "Billing Metadata"
     type: string
     sql: ${TABLE}.transaction_created_by ;;
   }
 
   dimension_group: transaction_end {
     type: time
+    group_label: "Line Item"
     label: "Transaction End Date"
     timeframes: [
       raw,
@@ -207,60 +215,71 @@ view: transactions_20170225_1029 {
 
   dimension: transaction_flagged {
     type: string
+    group_label: "Billing Metadata"
     sql: ${TABLE}.transaction_flagged ;;
   }
 
   dimension: transaction_invoice_description {
     type: string
+    group_label: "Billing Metadata"
     sql: ${TABLE}.transaction_invoice_description ;;
   }
 
   dimension: transaction_item {
     type: string
+    group_label: "Line Item"
     label: "Line Item"
     sql: ${TABLE}.transaction_item ;;
   }
 
   dimension: transaction_modified {
     type: date
+    group_label: "Billing Metadata"
     sql: ${TABLE}.transaction_modified ;;
   }
 
   dimension: transaction_modified_by {
     type: string
+    group_label: "Billing Metadata"
     sql: ${TABLE}.transaction_modified_by ;;
   }
 
 
   dimension: transaction_mrr_rate {
     type: number
+    group_label: "Line Item"
     sql: ${TABLE}.transaction_mrr_rate ;;
   }
 
   dimension: transaction_notes {
     type: string
+    group_label: "Line Item"
     sql: ${TABLE}.transaction_notes ;;
   }
 
   dimension: transaction_number {
     type: string
+    group_label: "Line Item"
     label: "Transaction Number"
     sql: ${TABLE}.transaction_number ;;
   }
 
   dimension: transaction_number_field_1 {
     type: number
+    group_label: "Line Item"
     sql: ${TABLE}.transaction_number_field_1 ;;
   }
 
   dimension: transaction_number_field_2 {
     type: string
+    group_label: "Line Item"
     sql: ${TABLE}.transaction_number_field_2 ;;
   }
 
   dimension_group: transaction_order {
     type: time
     label: "Order Date"
+    group_label: "Line Item"
     timeframes: [
       raw,
       time,
@@ -275,6 +294,7 @@ view: transactions_20170225_1029 {
 
   dimension: transaction_order_number {
     type: string
+    group_label: "Line Item"
     label: "Order Number"
     sql: ${TABLE}.transaction_order_number ;;
   }
@@ -287,11 +307,13 @@ view: transactions_20170225_1029 {
 
   dimension: transaction_permit_imbalance {
     type: yesno
+    hidden: yes
     sql: ${TABLE}.transaction_permit_imbalance ;;
   }
 
   dimension: transaction_quantity {
     type: number
+    group_label: "Renewal Related"
     label: "Item Quantity"
     sql: ${TABLE}.transaction_quantity ;;
   }
@@ -304,6 +326,7 @@ view: transactions_20170225_1029 {
 
   dimension: transaction_recognize {
     type: yesno
+    hidden:  yes
     sql: ${TABLE}.transaction_recognize ;;
   }
 
@@ -351,11 +374,13 @@ view: transactions_20170225_1029 {
 
   dimension: transaction_renewed_by {
     type: string
+    group_label: "Renewal Related"
     sql: ${TABLE}.transaction_renewed_by ;;
   }
 
   dimension: transaction_renews {
     type: string
+    group_label: "Renewal Related"
     sql: ${TABLE}.transaction_renews ;;
   }
 
@@ -374,29 +399,35 @@ view: transactions_20170225_1029 {
   dimension: transaction_sales_force_opportunity_id {
     type: string
     label: "SFDC Opportunity ID"
+    group_label: "Sales Related"
     sql: ${TABLE}.transaction_sales_force_opportunity_id ;;
   }
 
   dimension: transaction_sales_force_opportunity_line_item_id {
     type: string
     label: "SFDC Opportunity Line Item ID"
+    group_label: "Sales Related"
+
     sql: ${TABLE}.transaction_sales_force_opportunity_line_item_id ;;
   }
 
   dimension: transaction_sales_mgr {
     type: string
+    group_label: "Sales Related"
     label: "Sales Manager"
     sql: ${TABLE}.transaction_sales_mgr ;;
   }
 
   dimension: transaction_sales_rep {
     type: string
+    group_label: "Sales Related"
     label: "Sales Rep Opportunity Owner"
     sql: ${TABLE}.transaction_sales_rep ;;
   }
 
   dimension_group: transaction_start {
     type: time
+    group_label: "Line Item"
     label: "Start Date"
     timeframes: [
       raw,
@@ -417,22 +448,26 @@ view: transactions_20170225_1029 {
   }
 
   dimension: transaction_text_field_1 {
+    hidden: yes
     type: string
     sql: ${TABLE}.transaction_text_field_1 ;;
   }
 
   dimension: transaction_text_field_2 {
     type: string
+    hidden: yes
     sql: ${TABLE}.transaction_text_field_2 ;;
   }
 
   dimension: transaction_update_invoices {
     type: yesno
+    hidden: yes
     sql: ${TABLE}.transaction_update_invoices ;;
   }
 
   dimension: transaction_update_revenue {
     type: yesno
+    hidden: yes
     sql: ${TABLE}.transaction_update_revenue ;;
   }
 
