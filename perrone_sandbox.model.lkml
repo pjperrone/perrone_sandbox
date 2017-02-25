@@ -17,7 +17,7 @@ include: "*.dashboard.lookml"  # include all dashboards in this project
 # }
 
 explore: opportunity {
-  label: "Sandbox"
+  label: "SFDC Opportunities"
   view_label: "Opportunity"
 
   join: account {
@@ -37,7 +37,7 @@ explore: opportunity {
  }
 
 explore: account {
-  label: "Sandbox"
+  label: "SFDC Accounts"
   view_label: "Accounts"
 
   join: opportunity {
