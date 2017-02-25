@@ -42,7 +42,7 @@ explore: saasoptics_customers_20170225_1028 {
 }
 
 explore: transactions_20170225_1029 {
-  label: "SaasOptics Customers"
+  label: "SaasOptics Transactions"
 
 }
 
