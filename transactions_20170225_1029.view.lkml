@@ -3,13 +3,15 @@ view: transactions_20170225_1029 {
 
   dimension: contract_channel {
     type: string
+    group_label: "Contract"
     hidden: yes
     sql: ${TABLE}.contract_channel ;;
   }
 
   dimension_group: contract_entry {
     type: time
-    group_label: "Contract Dimensions"
+    hidden: yes
+    group_label: "Contract"
     timeframes: [
       raw,
       time,
@@ -24,42 +26,49 @@ view: transactions_20170225_1029 {
 
   dimension: contract_lead_date {
     type: string
+    hidden: yes
     group_label: "Contract"
     sql: ${TABLE}.contract_lead_date ;;
   }
 
   dimension: contract_lead_source {
     type: string
+    hidden: yes
     group_label: "Contract"
     sql: ${TABLE}.contract_lead_source ;;
   }
 
   dimension: contract_number {
     type: string
+    hidden: yes
     group_label: "Contract"
     sql: ${TABLE}.contract_number ;;
   }
 
   dimension: contract_number_field_1 {
     type: string
+    hidden: yes
     group_label: "Contract"
     sql: ${TABLE}.contract_number_field_1 ;;
   }
 
   dimension: contract_number_field_2 {
     type: string
+    hidden: yes
     group_label: "Contract"
     sql: ${TABLE}.contract_number_field_2 ;;
   }
 
   dimension: contract_text_field_1 {
     type: string
+    hidden: yes
     group_label: "Contract"
     sql: ${TABLE}.contract_text_field_1 ;;
   }
 
   dimension: contract_text_field_2 {
     type: string
+    hidden: yes
     group_label: "Contract"
     sql: ${TABLE}.contract_text_field_2 ;;
   }
@@ -114,6 +123,7 @@ view: transactions_20170225_1029 {
 
   dimension: customer_sales_force_id {
     type: string
+    hidden: yes
     group_label: "Customer"
     sql: ${TABLE}.customer_sales_force_id ;;
   }
@@ -121,6 +131,7 @@ view: transactions_20170225_1029 {
   dimension: customer_segment {
     type: number
     group_label: "Customer"
+    label: "Employee Count"
     sql: ${TABLE}.customer_segment ;;
   }
 
@@ -132,7 +143,8 @@ view: transactions_20170225_1029 {
 
   dimension: customer_subsegment {
     type: string
-    group_label: "Customer"
+    group_label: "Sales Related"
+    label: "Sales Team"
     sql: ${TABLE}.customer_subsegment ;;
   }
 
@@ -199,7 +211,6 @@ view: transactions_20170225_1029 {
 
   dimension_group: transaction_end {
     type: time
-    group_label: "Line Item"
     label: "Transaction End Date"
     timeframes: [
       raw,
@@ -279,7 +290,6 @@ view: transactions_20170225_1029 {
   dimension_group: transaction_order {
     type: time
     label: "Order Date"
-    group_label: "Line Item"
     timeframes: [
       raw,
       time,
@@ -294,7 +304,7 @@ view: transactions_20170225_1029 {
 
   dimension: transaction_order_number {
     type: string
-    group_label: "Line Item"
+    group_label: "Billing Metadata"
     label: "Order Number"
     sql: ${TABLE}.transaction_order_number ;;
   }
@@ -313,7 +323,7 @@ view: transactions_20170225_1029 {
 
   dimension: transaction_quantity {
     type: number
-    group_label: "Renewal Related"
+    group_label: "Line Item"
     label: "Item Quantity"
     sql: ${TABLE}.transaction_quantity ;;
   }
@@ -399,6 +409,7 @@ view: transactions_20170225_1029 {
   dimension: transaction_sales_force_opportunity_id {
     type: string
     label: "SFDC Opportunity ID"
+    hidden: yes
     group_label: "Sales Related"
     sql: ${TABLE}.transaction_sales_force_opportunity_id ;;
   }
@@ -406,7 +417,7 @@ view: transactions_20170225_1029 {
   dimension: transaction_sales_force_opportunity_line_item_id {
     type: string
     label: "SFDC Opportunity Line Item ID"
-    group_label: "Sales Related"
+    group_label: "Billing Metadata"
 
     sql: ${TABLE}.transaction_sales_force_opportunity_line_item_id ;;
   }
@@ -427,7 +438,6 @@ view: transactions_20170225_1029 {
 
   dimension_group: transaction_start {
     type: time
-    group_label: "Line Item"
     label: "Start Date"
     timeframes: [
       raw,
