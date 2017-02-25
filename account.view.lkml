@@ -22,7 +22,6 @@ view: account {
   }
 
 
-
   dimension: annual_revenue {
     type: number
     sql: ${TABLE}.annual_revenue ;;

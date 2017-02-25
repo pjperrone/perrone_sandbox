@@ -48,17 +48,17 @@ explore: transactions_20170225_1029 {
 
 explore: account {
   label: "SFDC Accounts"
-  view_label: "Accounts"
+  view_label: "Account"
 
   join: opportunity {
-    view_label: "Account"
+    view_label: "Opportunity"
     relationship:one_to_many
     type: left_outer
     sql_on: ${account.id} = ${opportunity.account_id} ;;
   }
 
   join: user {
-    view_label: "Users"
+    view_label: "User"
     relationship:one_to_one
     type: left_outer
     sql_on: ${account.id} = ${user.id} ;;
