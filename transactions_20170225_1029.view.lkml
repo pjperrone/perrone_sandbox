@@ -439,6 +439,7 @@ view: transactions_20170225_1029 {
   measure: transaction_mrr {
     type: sum
     label: "MRR"
+    value_format: "#,##0"
     description: "MRR from Transaction Line Item"
     drill_fields: [transaction_detail*]
     sql: ${TABLE}.transaction_mrr ;;
@@ -447,6 +448,7 @@ view: transactions_20170225_1029 {
   measure: transaction_amount {
     type: sum
     label: "Transaction Amount"
+    value_format: "#,##0"
     drill_fields: [transaction_detail*]
     sql: ${TABLE}.transaction_amount ;;
   }
@@ -454,6 +456,7 @@ view: transactions_20170225_1029 {
   measure: transaction_arr {
     type: sum
     label: "Transaction ARR"
+    value_format: "#,##0"
     drill_fields: [transaction_detail*]
     sql: ${TABLE}.transaction_arr ;;
   }
