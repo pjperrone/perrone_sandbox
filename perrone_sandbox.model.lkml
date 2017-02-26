@@ -61,7 +61,7 @@ explore: account {
     view_label: "User"
     relationship:one_to_one
     type: left_outer
-    sql_on: ${account.id} = ${user.id} ;;
+    sql_on: ${account.owner_id} = ${user.id} ;;
   }
 
 }
