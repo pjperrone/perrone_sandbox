@@ -393,7 +393,6 @@ view: transactions_20170225_1029 {
 
   dimension: transaction_renewed_by {
     type: string
-    hidden: yes
     sql: ${TABLE}.transaction_renewed_by ;;
   }
 

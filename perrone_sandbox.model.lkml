@@ -34,7 +34,15 @@ explore: opportunity {
     sql_on: ${opportunity.owner_id} = ${user.id} ;;
   }
 
- }
+  join: sdr {
+    from: user
+    view_label: "Users"
+    relationship:many_to_one
+    type: left_outer
+    sql_on: ${opportunity.sdr_owner_c} = ${sdr.id} ;;
+  }
+
+}
 
 explore: saasoptics_customers_20170225_1028 {
   label: "SaasOptics Customers"
