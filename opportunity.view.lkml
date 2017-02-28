@@ -375,7 +375,8 @@ view: opportunity {
       stage_name,
       forecast_category_name,
       account.name,
-      account.id
+      account.id,
+      acv_forecast_c
     ]
   }
 }
