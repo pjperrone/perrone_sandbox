@@ -358,6 +358,15 @@ view: opportunity {
     sql: ${TABLE}.acv_forecast_c ;;
   }
 
+  measure: sales_ops_forecast_c {
+    type: sum
+    label: "SVP Forecast"
+    value_format: "#,##0"
+    drill_fields: [detail*]
+
+  }
+
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
