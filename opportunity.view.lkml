@@ -115,10 +115,10 @@ view: opportunity {
   }
 
 
- # dimension: forecast_c {
-#    type: string
-#    sql: ${TABLE}.forecast_c ;;
-#  }
+  dimension: forecast_c {
+    type: string
+    sql: ${TABLE}.forecast_c ;;
+  }
 
   dimension: forecast_category {
     type: string
