@@ -376,7 +376,8 @@ view: opportunity {
       forecast_category_name,
       account.name,
       account.id,
-      acv_forecast_c
+      acv_forecast_c,
+      sales_ops_forecast_c
     ]
   }
 }
