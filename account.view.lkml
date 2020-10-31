@@ -1,3 +1,5 @@
+-- made an edit
+
 view: account {
   sql_table_name: salesforce.account ;;
 
